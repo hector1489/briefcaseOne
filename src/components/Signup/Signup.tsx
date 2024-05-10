@@ -1,10 +1,10 @@
 
-const Home = () => {
+const Signup = () => {
 
     return (
         <>
         </>
     )
 }
- export default Home
+ export default Signup
 
