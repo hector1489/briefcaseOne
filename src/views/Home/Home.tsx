@@ -1,4 +1,4 @@
-import { NavBar, Footer } from "../../components"
+import { NavBar, Footer, Login, Signup } from "../../components"
 
 
 const Home = () => {
@@ -6,6 +6,8 @@ const Home = () => {
     return (
         <>
         <NavBar />
+        <Login />
+        <Signup />
         <Footer />
         </>
     )
