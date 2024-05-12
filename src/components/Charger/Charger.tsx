@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useState, ChangeEvent } from 'react';
 import { Form, InputGroup, Button } from 'react-bootstrap'
 
 const Charger = () => {
-  const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedFile(event.target.files[0]);
+  const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files && event.target.files.length > 0) {
+      setSelectedFile(event.target.files[0]);
+    }
   };
 
   const handleUpload = () => {
