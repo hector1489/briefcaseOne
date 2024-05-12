@@ -15,8 +15,6 @@ export interface AuthContextProps {
 }
 
 export interface DataContextProps {
-    products: Product[];
-    setProducts: React.Dispatch<React.SetStateAction<Product[]>>;
     data: any[];
     setData: React.Dispatch<React.SetStateAction<any[]>>;
     formatNumber: (number: number) => string;
