@@ -15,7 +15,7 @@ const Charger = () => {
       const formData = new FormData();
       formData.append('excelFile', selectedFile);
 
-      // Aquí puedes agregar tu lógica para enviar formData al backend
+      // lógica para enviar formData al backend
       // fetch(url, {
       //   method: 'POST',
       //   body: formData,

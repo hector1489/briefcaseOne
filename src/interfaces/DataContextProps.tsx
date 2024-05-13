@@ -1,10 +1,8 @@
 
-export interface Product {
+export interface File {
     id: number;
     name: string;
-    price: number;
     category: string;
-    stock: number;
     url: string;
 }
 
