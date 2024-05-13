@@ -2,8 +2,8 @@
 const Footer = () => {
 
     return (
-        <footer>
-            <p>@BriefCase</p>
+        <footer className="text-center">
+            <p>Thanks for visiting @BriefCase</p>
         </footer>
     )
 }

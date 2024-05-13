@@ -1,11 +1,10 @@
-import { NavBar, Footer, Charger } from "../../components"
+import { Footer, Charger } from "../../components"
 
 
 const Home = () => {
 
     return (
         <>
-        <NavBar />
         <Charger />
         <Footer />
         </>

@@ -1,5 +1,6 @@
 import { useState, ChangeEvent } from 'react';
 import { Form, InputGroup, Button } from 'react-bootstrap'
+import './Charger.css'
 
 const Charger = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -27,7 +28,8 @@ const Charger = () => {
   };
 
   return (
-    <>
+    <div className='ChargerComponent p-2 d-flex justify-content-center'>
+      <form action="">
       <Form.Label htmlFor="basic-url">Upload Excel File</Form.Label>
       <InputGroup className="mb-3">
       <Form.Control
@@ -40,7 +42,8 @@ const Charger = () => {
           Upload
         </Button>
       </InputGroup>
-    </>
+      </form>
+    </div>
   )
 }
 
