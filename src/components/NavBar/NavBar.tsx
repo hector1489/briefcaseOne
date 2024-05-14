@@ -12,8 +12,8 @@ const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto gap-4">
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/login">Login</NavLink>
-            <NavLink to="/login">Signup</NavLink>
+            <NavLink to="/login">Log/Sig</NavLink>
+            <NavLink to="/login">Profile</NavLink>
             <NavLink to="/">News</NavLink>
           </Nav>
         </Navbar.Collapse>
