@@ -3,7 +3,7 @@ import { Form, Button } from 'react-bootstrap'
 const Signup = () => {
 
   return (
-    <Form>
+    <Form className='p-2'>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
