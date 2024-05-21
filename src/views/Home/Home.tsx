@@ -1,5 +1,5 @@
 import { Footer, Charger, Header, NavBar } from "../../components"
-
+import './Home.css'
 
 const Home = () => {
 
