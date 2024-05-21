@@ -1,10 +1,11 @@
-import { Footer, Charger } from "../../components"
+import { Footer, Charger, Header } from "../../components"
 
 
 const Home = () => {
 
     return (
         <>
+        <Header />
         <Charger />
         <Footer />
         </>
