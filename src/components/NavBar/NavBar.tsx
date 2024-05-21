@@ -6,7 +6,8 @@ import './NavBar.css'
 const NavBar = () => {
 
   return (
-    <div className='box-NavBar'>
+    <div className='box-NavBar d-flex justify-content-center mt-2'>
+      <nav>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
           <Navbar.Brand href="#home">Briefcase</Navbar.Brand>
@@ -21,6 +22,7 @@ const NavBar = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      </nav>
     </div>
   )
 }

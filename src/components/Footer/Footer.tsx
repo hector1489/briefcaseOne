@@ -2,7 +2,7 @@
 const Footer = () => {
 
     return (
-        <footer className="text-center">
+        <footer className="text-center text-white">
             <p>Thanks for visiting @BriefCase</p>
         </footer>
     )
