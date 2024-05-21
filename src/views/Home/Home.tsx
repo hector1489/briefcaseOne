@@ -1,4 +1,4 @@
-import { Footer, Charger, Header } from "../../components"
+import { Footer, Charger, Header, NavBar } from "../../components"
 
 
 const Home = () => {
@@ -6,6 +6,7 @@ const Home = () => {
     return (
         <>
         <Header />
+        <NavBar />
         <Charger />
         <Footer />
         </>
