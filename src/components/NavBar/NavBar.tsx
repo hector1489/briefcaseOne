@@ -8,9 +8,9 @@ const NavBar = () => {
   return (
     <div className='box-NavBar d-flex justify-content-center mt-2'>
       <nav>
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Navbar expand="lg" className="bg-black">
         <Container>
-          <Navbar.Brand href="#home">Briefcase</Navbar.Brand>
+          <Navbar.Brand href="#home" className='text-uppercase text-white'>Briefcase</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto gap-4">
