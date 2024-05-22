@@ -1,22 +1,24 @@
-import { useState, ChangeEvent } from 'react'
+import { useState, ChangeEvent, useContext } from 'react'
 import { Form, InputGroup, Button } from 'react-bootstrap'
 import { ENDPOINT } from '../config/constans'
 import './Charger.css'
+import { DataProvider } from '../../context/context'
 
 const Charger = () => {
-  const [selectedFile, setSelectedFile] = useState<File | null>(null)
-  const [isLoading, setIsLoading] = useState<boolean>(false)
-  const [error, setError] = useState<string | null>(null)
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+  const { setPdfFileUrl } = useContext(DataProvider)
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files.length > 0) {
       const file = event.target.files[0];
       if (file.type !== 'application/vnd.oasis.opendocument.text') {
-        setError('Solo se permiten archivos ODT.');
-        return;
+        setError('Solo se permiten archivos ODT.')
+        return
       }
-      setSelectedFile(file);
-      setError(null);
+      setSelectedFile(file)
+      setError(null)
     }
   }
 
@@ -25,8 +27,8 @@ const Charger = () => {
       const formData = new FormData();
       formData.append('file', selectedFile)
 
-      setIsLoading(true)
-      setError(null)
+      setIsLoading(true);
+      setError(null);
 
       fetch(ENDPOINT.fileUpload, {
         method: 'POST',
@@ -39,13 +41,8 @@ const Charger = () => {
           return response.blob()
         })
         .then((blob) => {
-          const url = window.URL.createObjectURL(new Blob([blob]))
-          const a = document.createElement('a')
-          a.href = url
-          a.download = 'converted.pdf'
-          document.body.appendChild(a)
-          a.click()
-          a.remove()
+          const url = window.URL.createObjectURL(blob)
+          setPdfFileUrl(url)
         })
         .catch((error) => {
           setError(error.message)
