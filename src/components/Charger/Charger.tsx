@@ -10,7 +10,13 @@ const Charger = () => {
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files.length > 0) {
-      setSelectedFile(event.target.files[0])
+      const file = event.target.files[0];
+      if (file.type !== 'application/vnd.oasis.opendocument.text') {
+        setError('Solo se permiten archivos ODT.');
+        return;
+      }
+      setSelectedFile(file);
+      setError(null);
     }
   }
 
