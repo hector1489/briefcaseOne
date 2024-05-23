@@ -2,13 +2,19 @@ import { useState, ChangeEvent, useContext } from 'react'
 import { Form, InputGroup, Button } from 'react-bootstrap'
 import { ENDPOINT } from '../config/constans'
 import './Charger.css'
-import { DataProvider } from '../../context/context'
+import DataContext from '../../context/context'
 
 const Charger = () => {
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
-  const { setPdfFileUrl } = useContext(DataProvider)
+  const [selectedFile, setSelectedFile] = useState<File | null>(null)
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [error, setError] = useState<string | null>(null)
+  const context = useContext(DataContext)
+
+  if (!context) {
+    throw new Error("DataContext debe ser usado dentro de un DataProvider")
+  }
+
+  const { setPdfFileUrl } = context
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files.length > 0) {
@@ -24,10 +30,10 @@ const Charger = () => {
 
   const handleUpload = () => {
     if (selectedFile) {
-      const formData = new FormData();
+      const formData = new FormData()
       formData.append('file', selectedFile)
 
-      setIsLoading(true);
+      setIsLoading(true)
       setError(null);
 
       fetch(ENDPOINT.fileUpload, {
