@@ -63,7 +63,7 @@ const Charger = () => {
   return (
     <div className='ChargerComponent p-2 d-flex justify-content-center'>
       <form>
-        <Form.Label htmlFor="basic-url" className='text-white'>Upload ODT File</Form.Label>
+        <Form.Label htmlFor="basic-url" className='text-white'>⬆️ Upload ODT File</Form.Label>
         <InputGroup className="mb-3">
           <Form.Control
             type="file"
