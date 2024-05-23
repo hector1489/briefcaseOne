@@ -1,4 +1,4 @@
-import { createContext, useState, ReactNode } from "react"
+import { createContext, useState, ReactNode, useMemo } from "react"
 import { DataContextProps } from "../interfaces/DataContextProps"
 
 const DataContext = createContext<DataContextProps | undefined>(undefined)
@@ -13,8 +13,13 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
 
   const formatNumber = (number: number) => number.toLocaleString()
 
+  const value = useMemo(
+    () => ({ data, setData, formatNumber, pdfFileUrl, setPdfFileUrl }),
+    [data, pdfFileUrl]
+  );
+
   return (
-    <DataContext.Provider value={{ data, setData, formatNumber, pdfFileUrl, setPdfFileUrl }}>
+    <DataContext.Provider value={ value }>
       {children}
     </DataContext.Provider>
   )
