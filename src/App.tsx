@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Home, LoginPage, UserAccount } from './views'
+import { Home, LoginPage, News, UserAccount } from './views'
 import { DataProvider } from './context/context'
 import './App.css'
 
@@ -15,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="/profile" element={<UserAccount />} />
+          <Route path="/News" element={<News /> } />
         </Routes>
 
       </BrowserRouter>
