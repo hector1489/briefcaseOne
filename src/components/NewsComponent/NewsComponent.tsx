@@ -4,8 +4,8 @@ const NewsComponent = () => {
 
     return(
         <div className="text-white">
-        <h4>title</h4>
-        <p>componente</p>
+        <h3>Briefcase</h3>
+        <p>Convertidor de archivos online gratuito.</p>
         </div>
     )
 }
