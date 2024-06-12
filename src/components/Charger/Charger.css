@@ -1,11 +1,10 @@
-
 .ChargerComponent {
-    width: 100%;
-    height: auto;
-    min-height: 300px;
+  width: 100%;
+  height: auto;
+  min-height: 300px;
 }
 
 form {
-    width: 30rem;
-    height: auto;
+  width: 30rem;
+  height: auto;
 }
