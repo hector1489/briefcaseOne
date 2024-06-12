@@ -3,14 +3,14 @@ import './Home.css'
 
 const Home = () => {
 
-    return (
-        <>
-        <Header />
-        <NavBar />
-        <Charger />
-        <Footer />
-        </>
-    )
+  return (
+    <>
+      <Header />
+      <NavBar />
+      <Charger />
+      <Footer />
+    </>
+  )
 }
- export default Home
+export default Home
 
