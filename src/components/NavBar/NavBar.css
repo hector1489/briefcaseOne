@@ -1,9 +1,9 @@
 .box-NavBar {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 nav {
-    width: 70rem;
-    border-radius: 10px;
+  width: 70rem;
+  border-radius: 10px;
 }
