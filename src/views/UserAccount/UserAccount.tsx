@@ -1,5 +1,4 @@
 
-
 const UserAccount = () => {
 
   return (
@@ -9,4 +8,6 @@ const UserAccount = () => {
     </>
   )
 }
+
 export default UserAccount
+
